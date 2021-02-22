@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { MeshPhysicalMaterial, MeshPhysicalMaterialParameters, Shader } from 'three'
+import { MeshPhongMaterial, MeshPhysicalMaterialParameters, Shader } from 'three'
 import { useFrame } from 'react-three-fiber'
 // eslint-disable-next-line
 // @ts-ignore
@@ -28,7 +28,7 @@ interface Uniform<T> {
   value: T
 }
 
-class DistortMaterialImpl extends MeshPhysicalMaterial {
+class DistortMaterialImpl extends MeshPhongMaterial {
   _time: Uniform<number>
   _distort: Uniform<number>
   _radius: Uniform<number>
